@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HomeScreen({ onStartOrder }) {
+export default function HomeScreen({ onStartOrder, onOpenAdmin }) {
   return (
     <div className="home-screen">
       <header className="home-header">
@@ -9,6 +9,14 @@ export default function HomeScreen({ onStartOrder }) {
           <span className="logo-badge">24</span>
         </div>
         <div className="home-status">
+          <button 
+            id="btn-home-admin" 
+            type="button" 
+            className="home-admin-btn" 
+            onClick={onOpenAdmin}
+          >
+            🔒 Staff Admin
+          </button>
           <span>CHINESE KITCHEN</span>
           <span className="status-dot"></span>
           <span>OPEN 24/7</span>
@@ -22,7 +30,12 @@ export default function HomeScreen({ onStartOrder }) {
           <p className="main-desc">
             Your Chinese street-food fix, made fresh and served fast. Tap in and build your perfect meal.
           </p>
-          <button className="cta-start-btn" onClick={onStartOrder}>
+          <button 
+            id="btn-start-order" 
+            type="button"
+            className="cta-start-btn" 
+            onClick={onStartOrder}
+          >
             <span>Start your order</span>
             <span className="cta-arrow">→</span>
           </button>

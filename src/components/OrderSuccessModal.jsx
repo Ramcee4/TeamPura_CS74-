@@ -14,7 +14,11 @@ export default function OrderSuccessModal({ orderData, onClose }) {
           <div><span>Total Charged:</span> <strong>₱{orderData.total.toFixed(2)}</strong></div>
           <div><span>Rewards Earned:</span> <strong className="rewards-gold">+{orderData.points} Points</strong></div>
         </div>
-        <button className="back-to-menu-btn" onClick={onClose}>
+        <button 
+          id="btn-order-success-done" 
+          className="back-to-menu-btn" 
+          onClick={onClose}
+        >
           Done
         </button>
       </div>
